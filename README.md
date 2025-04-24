@@ -28,14 +28,14 @@ Install [Conda](https://conda.io/projects/conda/en/latest/user-guide/install)/[M
 
 Create new environment with installed Conda/Miniconda:
 ```bash
-conda install --name nextflow --yes -c bioconda nextflow==22.05
+conda create --name nextflow --yes -c bioconda nextflow==22.05
 ```
 
 ### MultiQC
 
 Create new environment for MultiQC
 ```bash
-conda install -p /path/to/pipeline/multiqc --yes -c bioconda multiqc==1.24.1
+conda create -p /path/to/pipeline/multiqc --yes -c bioconda multiqc==1.24.1
 ```
 
 ### GTDB-Tk
@@ -99,7 +99,7 @@ mamba run -p /path/to/pipeline/metaphlan metaphlan --install
 1. Install it in the pipeline directory:
 
 ```bash
-mamba create -p /path/to/pipeline/mw-env -c ursky metawrap-mg=1.3.2
+mamba create -p /path/to/pipeline/mw-env -c ursky -c conda-forge -c bioconda -c defaults metawrap-mg=1.3.2
 ```
 
 2. Make corrections to metaWRAP bin_refinement.sh script:
